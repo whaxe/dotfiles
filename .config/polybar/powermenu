@@ -1,0 +1,15 @@
+#!/bin/bash
+choices="Poweroff\nLogout\nReboot\nLock\nSuspend"
+chosen=$(echo -e $choices | rofi -dmenu -i -config $HOME/.config/rofi/powermenu.rasi)
+fg=$(xrdb -query | grep foreground | cut -d':' -f2 | sed 's/	//g')
+bg=$(xrdb -query | grep background | cut -d':' -f2 | sed 's/	//g')
+# chosen=$(echo -e $choices | prompt "Powermenu")
+echo "$chosen"
+
+case "$chosen" in
+        Lock) i3lock ;;
+        Suspend) i3lock && systemctl suspend ;;
+		Logout) pkill -KILL -u $USER ;;
+		Poweroff) poweroff ;;
+		Reboot) reboot ;; 
+esac
