@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for file in $HOME/.axe/bin/*
+do
+  $file
+done
