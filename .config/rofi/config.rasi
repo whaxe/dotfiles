@@ -1,0 +1,233 @@
+* {
+
+
+    foreground  : #CCFFEB;
+    background  : #0D0D0D;
+
+    color0  : #21212A;
+    color1  : #279e56;
+    color2  : #149f4b;
+    color3  : #04a043;
+    color4  : #00963d;
+    color5  : #009650;
+    color6  : #009267;
+    color7  : #DEDEF5;
+    color8  : #2B2C37;
+    color9  : #33d071;
+    color10  : #1ad162;
+    color11  : #05d257;
+    color12  : #00c851;
+    color13  : #00c86a;
+    color14  : #00c48a;
+    color15  : #E7E7FF;
+
+
+    base03:  #002b36;
+    base02:  #073642;
+    base01:  #586e75;
+    base00:  #657b83;
+    base0:   #839496;
+    base1:   #93a1a1;
+    base2:   #eee8d5;
+    base3:   #fdf6e3;
+    yellow:  #b58900;
+    orange:  #cb4b16;
+    red:     #dc322f;
+    magenta: #d33682;
+    violet:  #6c71c4;
+    blue:    #268bd2;
+    cyan:    #2aa198;
+    green:   #859900;
+    white:   #ffffff;
+
+
+    transparent-background:      rgba ( 0, 0, 0, 0 % );
+    background:                  rgba ( 0, 0, 0, 90 % );
+
+
+    normal-foreground:           @foreground;
+    normal-background:           @transparent-background;
+    active-foreground:           @foreground;
+    active-background:           @transparent-background;
+    urgent-foreground:           @red;
+    urgent-background:           @transparent-background;
+
+
+    selected-normal-foreground:  @white;
+    selected-normal-background:  @color2;
+    selected-active-foreground:  @white;
+    selected-active-background:  @color2;
+    selected-urgent-foreground:  @red;
+    selected-urgent-background:  @color2;
+
+
+    alternate-normal-foreground: @foreground;
+    alternate-normal-background: @transparent-background;
+    alternate-active-foreground: @active-foreground;
+    alternate-active-background: @transparent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    alternate-urgent-background: @transparent-background;
+
+
+    separatorcolor:              @color4;
+
+
+    border-color:                @color12;
+    spacing:                     2;
+    background-color:            @transparent-background;
+}
+
+
+
+#window {
+    background-color: @background;
+    border:           2;
+    padding:          20;
+    width:	      40%;
+    height:	      40%;
+}
+
+
+#mainbox {
+    border:  0;
+    padding: 0;
+}
+
+
+#message {
+    border:       2px solid 0px 0px;
+    border-color: @separatorcolor;
+    padding:      1px;
+}
+
+
+#textbox {
+    text-color: @foreground;
+}
+
+
+#listview {
+    fixed-height: 0;
+    border:       1px solid 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      10px 0px 0px 0px;
+}
+
+
+#element {
+    border:  0px;
+    padding: 1px 1px 1px 1px;
+    margin: 2px 2px 2px 2px;
+}
+
+
+#element.normal.normal {
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
+}
+
+
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
+}
+
+
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @selected-urgent-foreground;
+}
+
+
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
+}
+
+
+#element.alternate.normal {
+    background-color: @alternate-normal-background;
+    text-color:       @alternate-normal-foreground;
+}
+
+
+#element.alternate.urgent {
+    background-color: @alternate-urgent-background;
+    text-color:       @alternate-urgent-foreground;
+}
+
+
+#element.alternate.active {
+    background-color: @alternate-active-background;
+    text-color:       @alternate-active-foreground;
+}
+
+
+#scrollbar {
+    width:        4px;
+    border:       0;
+    handle-width: 8px;
+    padding:      0;
+}
+
+
+#sidebar {
+    border:       2px solid 0px 0px;
+    border-color: @separatorcolor;
+}
+
+
+#button.selected {
+    background-color: @color9;
+    text-color:       @blue;
+}
+
+
+#button {
+    background-color: @color9;
+    text-color:       @white;
+    margin:           50px 10px 5px 10px;
+    padding:          3px;
+}
+
+
+#inputbar {
+    children: [entry];
+    spacing:    0;
+    text-color: @normal-foreground;
+    padding:    3px;
+}
+
+
+#case-indicator {
+    spacing:    0;
+    text-color: @normal-foreground;
+}
+
+
+#entry {
+    spacing:    0;
+    padding:    5px;
+    text-color: @foreground;
+}
+
+
+#prompt {
+    spacing:    0;
+    padding:    5px;
+    text-color: @color15;
+}

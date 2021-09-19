@@ -1,0 +1,9 @@
+@import "./config.rasi"
+
+inputbar {
+    children: [];
+}                                                                
+
+#listview {
+    border: 0 0 0;
+}
